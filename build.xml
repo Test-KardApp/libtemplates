@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<project name="generate-template-sources" default="gather-files">
+    <taskdef resource="net/sf/antcontrib/antcontrib.properties"/>
+    <target name="gather-files">
+        <foreach target="generate" param="optFile" inheritall="true">
+            <path id="base.path">
+                <fileset dir="src/main/resources/templates">
+                    <include name="**/*.opt"/>
+                </fileset>
+            </path>
+        </foreach>
+    </target>
+    <target name="generate">
+        <echo message="Generating source for template ${optFile}"/>
+        <java fork="true"
+              failonerror="yes"
+              classname="org.ehrbase.client.classgenerator.ClassGeneratorRunner">
+            <arg line="-opt ${optFile} -out ${src_path} -package se.kardapp.templates"/>
+            <classpath>
+                <pathelement path="${runtime_classpath}"/>
+            </classpath>
+        </java>
+    </target>
+</project>
