@@ -15,7 +15,7 @@
         <java fork="true"
               failonerror="yes"
               classname="org.ehrbase.client.classgenerator.ClassGeneratorRunner">
-            <arg line="-opt ${optFile} -out ${src_path} -package se.kardapp.templates"/>
+            <arg line="-opt ${optFile} -out ${src_path} -package se.Test-KardApp.templates"/>
             <classpath>
                 <pathelement path="${runtime_classpath}"/>
             </classpath>

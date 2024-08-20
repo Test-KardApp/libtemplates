@@ -1,4 +1,4 @@
-package se.kardapp.templates;
+package se.Test-KardApp.templates;
 
 import org.junit.jupiter.api.Assertions;
 import org.openehr.schemas.v1.OPERATIONALTEMPLATE;

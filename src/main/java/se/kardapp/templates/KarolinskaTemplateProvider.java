@@ -1,4 +1,4 @@
-package se.kardapp.templates;
+package se.Test-KardApp.templates;
 
 import org.apache.xmlbeans.XmlException;
 import org.ehrbase.webtemplate.templateprovider.TemplateProvider;
